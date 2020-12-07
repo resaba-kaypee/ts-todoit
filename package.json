@@ -1,0 +1,11 @@
+{
+  "name": "chapter-2",
+  "version": "1.0.0",
+  "description": "todoit app",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "watch": "tsc --watch",
+    "serve": "browser-sync start --server 'public' --watch"
+  }
+}
