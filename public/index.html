@@ -12,11 +12,11 @@
       <input
         type="text"
         id="todoInput"
-        title="What should be added to the
-      todo list?"
-        onblur="addTodo()"
+        title="What should be added to the todo list?"
+        onkeyup="if(EventUtils.isEnter(event)) { todoIt.addTodo() }"
+        onblur="todoIt.addTodo()"
       />
-      <input type="button" value="Add todo" onclick="addTodo()" />
+      <input type="button" value="Add todo" onclick="todoIt.addTodo()" />
     </p>
     <h2>Current todo list</h2>
     <p>
@@ -25,8 +25,8 @@
         type="text"
         id="todoFilter"
         title="Filter for the todo list"
-        onkeyup="filterTodoList()"
-        onblur="filterTodoList()"
+        onkeyup="todoIt.filterTodoList()"
+        onblur="todoIt.filterTodoList()"
       />
     </p>
     <div id="todoListContainer">Nothing to do, hurray!</div>
